@@ -4,11 +4,6 @@ from ultralytics import YOLO
 app = Flask(__name__)
 
 
-@app.route("/")
-def teste():
-    return jsonify(connection="Ok")
-
-
 @app.route("/detect", methods=['POST'])
 def detect():
     if 'file' not in request.files:
